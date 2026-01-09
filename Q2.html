@@ -1,13 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Add Fruit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2: Add Fruit</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            outline: none;
+        }
+        input[type="text"]:focus {
+            border-color: #11998e;
+        }
+        button {
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            background: #f8f9fa;
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #11998e;
+            font-size: 1.1em;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <h3>Fruit List</h3>
-    <ul id="fruit-list"></ul>
-    <input id="fruit-input" type="text" placeholder="Enter a fruit">
-    <button id="add-fruit">Add Fruit</button>
+    <div class="container">
+        <h3>Fruit List</h3>
+        <div class="input-group">
+            <input id="fruit-input" type="text" placeholder="Enter a fruit">
+            <button id="add-fruit">Add</button>
+        </div>
+        <ul id="fruit-list"></ul>
+    </div>
 
     <script src="script.js"></script>
 </body>
